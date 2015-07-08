@@ -62,7 +62,7 @@ namespace AzirSharp
                 castWTarget(targ);
             }
             // if (getEnemiesInSolRange().Count == 0)
-            if (!W.IsReady(1600) && (!enemyInAzirRange(targ) || (targ.Health <= Q.GetDamage(targ) + DeathWalker.getRealAADmg(targ))) && AzirSharp.Config.Item("useQ").GetValue<bool>())
+            if (!enemyInAzirRange(targ) || (targ.Health <= Q.GetDamage(targ) + DeathWalker.getRealAADmg(targ))) && AzirSharp.Config.Item("useQ").GetValue<bool>())
                 castQTarget(targ);
 
             if (AzirSharp.Config.Item("useE").GetValue<bool>() )
